@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "python-vscode-copilot"
+version = "0.1.0"
+description = "Simple Python web service with static HTML and F14 endpoint"
+authors = ["Your Name <you@example.com>"]
+packages = [
+    { include = "app" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<4.0"
+pyautogui = "*"
+requests = "*"
+pillow = "*"
+
+[tool.poetry.group.dev.dependencies]
+# Add dev dependencies here
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
