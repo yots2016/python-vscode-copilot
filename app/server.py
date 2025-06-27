@@ -21,6 +21,8 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             return controller.f14(self)
         elif self.path == "/image":
             return controller.image(self)
+        elif self.path == "/endpoints":
+            return controller.list_endpoints(self)
         return super().do_GET()
 
 if __name__ == "__main__":
