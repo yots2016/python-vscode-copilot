@@ -1,0 +1,66 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Simple API",
+    "version": "1.0.0",
+    "description": "A simple API served by http.server"
+  },
+  "paths": {
+    "/": {
+      "get": {
+        "summary": "Serves the main hello page.",
+        "description": "Returns the content of `static/hello.html`.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/f14": {
+      "get": {
+        "summary": "Simulates pressing the F14 key.",
+        "description": "Triggers a simulated F14 key press on the server and returns a confirmation message.",
+        "responses": {
+          "200": {
+            "description": "F14 key press simulated successfully.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string",
+                  "example": "F14 pressed"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/image": {
+      "get": {
+        "summary": "Serves a dynamically generated PNG image.",
+        "description": "Creates and returns a PNG image with text 'Hello from Pillow!'.",
+        "responses": {
+          "200": {
+            "description": "A PNG image.",
+            "content": {
+              "image/png": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
